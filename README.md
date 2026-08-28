@@ -1,0 +1,1 @@
+A beginner-friendly Netflix homepage clone built with HTML, CSS, and JavaScript. Features a responsive design, hero banner, movie cards, hover effects, and interactive UI components. Ideal for practicing front-end web development skills.
