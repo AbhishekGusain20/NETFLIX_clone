@@ -1,53 +1,441 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Clone</title>
+
+    <meta name="description"
+          content="StreamBox - Educational streaming platform UI project built with HTML, CSS and JavaScript.">
+
+    <meta name="robots" content="index, follow">
+
+    <title>NETFLIX | Educational Streaming Demo</title>
+
     <link rel="stylesheet" href="NETFLIX.css">
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">NETFLIX</div>
-            <button id="signin">Sign In</button>
-        </nav>
+    <!-- ================= HEADER ================= -->
+    <header class="navbar">
 
-        <div class="banner">
-            <h1>Unlimited movies, TV shows and more.</h1>
-            <p>Watch anywhere. Cancel anytime.</p>
-            <button class="watch-btn">Watch Now</button>
+        <div class="nav-left"> <a href="#" class="logo" id="logo"> <span>NETFLIX</span> </a>
+
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#movies">Movies</a>
+                <a href="#series">Series</a>
+                <a href="#trending">Trending</a>
+            </nav>
         </div>
+
+        <div class="nav-right">
+
+            <button class="search-btn" id="searchBtn" aria-label="Search">
+                🔍
+            </button>
+
+            <button class="demo-btn" id="demoBtn">
+                Demo Info
+            </button>
+
+        </div>
+
     </header>
 
-    <section class="movies">
-        <h2>Popular Movies</h2>
 
-        <div class="movie-row">
-            <div class="movie-card">
-                <img src="https://picsum.photos/200/300?1" alt="">
+    <!-- ================= SEARCH ================= -->
+    <div class="search-box" id="searchBox">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search movies and series..."
+            autocomplete="off"
+        >
+
+        <button id="closeSearch" aria-label="Close search">
+            ✕
+        </button>
+
+    </div>
+
+
+    <!-- ================= DEMO NOTICE ================= -->
+    <div class="project-notice">
+        <strong>Educational Project</strong>
+        <span>
+            This is a student-made streaming UI demo and is not affiliated with
+            or connected to any streaming service.
+        </span>
+
+        <button id="closeNotice" aria-label="Close notice">
+            ✕
+        </button>
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="small-label">
+                    NETFLIX ORIGINAL
+                </p>
+
+                <h1>
+                    The Last<br>
+                    <span>Adventure</span>
+                </h1>
+
+                <div class="hero-meta">
+                    <span>2026</span>
+                    <span>16+</span>
+                    <span>2h 14m</span>
+                    <span>Adventure</span>
+                </div>
+
+                <p class="hero-description">
+                    A group of explorers discovers a forgotten world hidden
+                    beyond the edge of civilization. Their journey becomes
+                    their greatest adventure.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn" id="watchHero">
+                        ▶ Watch Demo
+                    </button>
+
+                    <button class="secondary-btn" id="moreInfo">
+                        ⓘ More Info
+                    </button>
+
+                </div>
+
             </div>
 
-            <div class="movie-card">
-                <img src="https://picsum.photos/200/300?2" alt="">
+        </section>
+
+
+        <!-- ================= MOVIES ================= -->
+        <section class="content-section" id="movies">
+
+            <div class="section-heading">
+                <h2>Popular Movies</h2>
+                <button class="see-all" data-section="movies">
+                    See all
+                </button>
             </div>
 
-            <div class="movie-card">
-                <img src="https://picsum.photos/200/300?3" alt="">
+            <div class="movie-row" id="movieRow">
+
+                <article class="movie-card"
+                         data-title="The Last Adventure"
+                         data-category="Adventure">
+
+                    <div class="poster poster-one">
+                        <span class="poster-number">01</span>
+                        <div>
+                            <h3>The Last Adventure</h3>
+                            <p>Adventure</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>The Last Adventure</h3>
+                        <span>2026 • 2h 14m</span>
+                    </div>
+
+                </article>
+
+
+                <article class="movie-card"
+                         data-title="Night Runner"
+                         data-category="Action">
+
+                    <div class="poster poster-two">
+                        <span class="poster-number">02</span>
+                        <div>
+                            <h3>Night Runner</h3>
+                            <p>Action</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Night Runner</h3>
+                        <span>2025 • 1h 58m</span>
+                    </div>
+
+                </article>
+
+
+                <article class="movie-card"
+                         data-title="Beyond Earth"
+                         data-category="Sci-Fi">
+
+                    <div class="poster poster-three">
+                        <span class="poster-number">03</span>
+                        <div>
+                            <h3>Beyond Earth</h3>
+                            <p>Sci-Fi</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Beyond Earth</h3>
+                        <span>2026 • 2h 05m</span>
+                    </div>
+
+                </article>
+
+
+                <article class="movie-card"
+                         data-title="Hidden City"
+                         data-category="Mystery">
+
+                    <div class="poster poster-four">
+                        <span class="poster-number">04</span>
+                        <div>
+                            <h3>Hidden City</h3>
+                            <p>Mystery</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Hidden City</h3>
+                        <span>2025 • 1h 49m</span>
+                    </div>
+
+                </article>
+
+
+                <article class="movie-card"
+                         data-title="Ocean Deep"
+                         data-category="Drama">
+
+                    <div class="poster poster-five">
+                        <span class="poster-number">05</span>
+                        <div>
+                            <h3>Ocean Deep</h3>
+                            <p>Drama</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Ocean Deep</h3>
+                        <span>2024 • 1h 52m</span>
+                    </div>
+
+                </article>
+
             </div>
 
-            <div class="movie-card">
-                <img src="https://picsum.photos/200/300?4" alt="">
+        </section>
+
+
+        <!-- ================= SERIES ================= -->
+        <section class="content-section" id="series">
+
+            <div class="section-heading">
+                <h2>Popular Series</h2>
+                <button class="see-all">
+                    See all
+                </button>
             </div>
 
-            <div class="movie-card">
-                <img src="https://picsum.photos/200/300?5" alt="">
+            <div class="movie-row">
+
+                <article class="movie-card"
+                         data-title="Code 404"
+                         data-category="Technology">
+
+                    <div class="poster series-one">
+                        <span class="poster-number">01</span>
+                        <div>
+                            <h3>Code 404</h3>
+                            <p>Technology</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Code 404</h3>
+                        <span>Season 2 • 8 Episodes</span>
+                    </div>
+
+                </article>
+
+
+                <article class="movie-card"
+                         data-title="The Campus"
+                         data-category="Drama">
+
+                    <div class="poster series-two">
+                        <span class="poster-number">02</span>
+                        <div>
+                            <h3>The Campus</h3>
+                            <p>Drama</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>The Campus</h3>
+                        <span>Season 1 • 10 Episodes</span>
+                    </div>
+
+                </article>
+
+
+                <article class="movie-card"
+                         data-title="Dark Signal"
+                         data-category="Thriller">
+
+                    <div class="poster series-three">
+                        <span class="poster-number">03</span>
+                        <div>
+                            <h3>Dark Signal</h3>
+                            <p>Thriller</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Dark Signal</h3>
+                        <span>Season 3 • 6 Episodes</span>
+                    </div>
+
+                </article>
+
+
+                <article class="movie-card"
+                         data-title="Future City"
+                         data-category="Sci-Fi">
+
+                    <div class="poster series-four">
+                        <span class="poster-number">04</span>
+                        <div>
+                            <h3>Future City</h3>
+                            <p>Sci-Fi</p>
+                        </div>
+                    </div>
+
+                    <div class="card-info">
+                        <h3>Future City</h3>
+                        <span>Season 1 • 12 Episodes</span>
+                    </div>
+
+                </article>
+
             </div>
+
+        </section>
+
+
+        <!-- ================= TRENDING ================= -->
+        <section class="content-section" id="trending">
+
+            <div class="section-heading">
+                <h2>Trending Now</h2>
+            </div>
+
+            <div class="trending-list">
+
+                <div class="trending-item">
+                    <span class="rank">01</span>
+                    <div class="trend-poster trend-one"></div>
+                    <div class="trend-info">
+                        <h3>The Last Adventure</h3>
+                        <p>Adventure • 2026</p>
+                    </div>
+                    <button class="play-small">▶</button>
+                </div>
+
+                <div class="trending-item">
+                    <span class="rank">02</span>
+                    <div class="trend-poster trend-two"></div>
+                    <div class="trend-info">
+                        <h3>Night Runner</h3>
+                        <p>Action • 2025</p>
+                    </div>
+                    <button class="play-small">▶</button>
+                </div>
+
+                <div class="trending-item">
+                    <span class="rank">03</span>
+                    <div class="trend-poster trend-three"></div>
+                    <div class="trend-info">
+                        <h3>Beyond Earth</h3>
+                        <p>Sci-Fi • 2026</p>
+                    </div>
+                    <button class="play-small">▶</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= MODAL ================= -->
+    <div class="modal" id="infoModal">
+
+        <div class="modal-content">
+
+            <button class="modal-close" id="modalClose">
+                ✕
+            </button>
+
+            <span class="modal-label">
+                EDUCATIONAL DEMO
+            </span>
+
+            <h2>About StreamBox</h2>
+
+            <p>
+                StreamBox is a frontend streaming-platform concept created
+                for learning HTML, CSS and JavaScript.
+            </p>
+
+            <p>
+                No real account, password, payment information or personal
+                credentials are requested or stored by this demo.
+            </p>
+
+            <button class="primary-btn" id="modalOkay">
+                Got it
+            </button>
+
         </div>
-    </section>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <div class="footer-logo">
+            <span>NETFLIX</span>
+        </div>
+
+        <p>
+            Educational frontend project by Abhishek Gusain.
+        </p>
+
+        <p class="copyright">
+            © 2026 StreamBox Demo. Created for learning purposes.
+        </p>
+
+    </footer>
+
 
     <script src="NETFLIX.js"></script>
+
 </body>
 </html>
 
