@@ -1,4 +1,4 @@
-# 🎬 StreamBox – Educational Streaming UI
+# 🎬 NETFLIX – Educational Streaming UI
 
 A modern **streaming-platform UI project** built using HTML, CSS, and JavaScript.
 
