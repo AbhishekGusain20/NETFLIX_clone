@@ -1,30 +1,57 @@
-# 🎬 Netflix Clone
+# 🎬 NETFLIX – Educational Streaming UI
 
-My **first frontend project**, inspired by the Netflix homepage. Built using HTML, CSS, and JavaScript.
+A modern **streaming-platform UI project** built using HTML, CSS, and JavaScript.
+
+This project is created for **frontend web development practice** and is not affiliated with Netflix or any other streaming service.
 
 ## 🚀 Live Demo
 
-[View Live Website](https://abhishekgusain20.github.io/NETFLIX_clone/)
+👉 **[View Live Website](https://abhishekgusain20.github.io/NETFLIX_clone/)**
 
-## 🛠️ Technologies
+## 📸 Project Preview
 
-* HTML5
-* CSS3
-* JavaScript
+A responsive streaming-style homepage featuring:
+
+- 🎬 Hero section
+- 🔎 Search functionality
+- 🎞️ Movie cards
+- 📺 Series section
+- 🔥 Trending section
+- ℹ️ Project information modal
+- ▶️ Demo player buttons
+- 📱 Responsive design
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Git & GitHub
+- GitHub Pages
 
 ## ✨ Features
 
-* Responsive design
-* Netflix-style homepage
-* Hero banner
-* Movie cards
-* Hover effects
-* Interactive buttons
+### 🔍 Search
+Search movies and series by title or category.
 
-## 👨‍💻 Author
+### 🎬 Movie & Series Cards
+Interactive cards with movie/series information.
 
-**Abhishek Gusain**
+### 📱 Responsive Design
+The website adapts to desktop, tablet, and mobile screens.
 
-GitHub: [AbhishekGusain20](https://github.com/AbhishekGusain20)
+### 🪟 Information Modal
+Displays information about the educational purpose of the project.
 
-> This project was created for learning and practicing frontend web development.
+### ▶️ Demo Player
+Frontend-only demo buttons without real video streaming.
+
+## 📂 Project Structure
+
+```text
+NETFLIX_clone/
+│
+├── index.html
+├── NETFLIX.css
+├── NETFLIX.js
+└── README.md
